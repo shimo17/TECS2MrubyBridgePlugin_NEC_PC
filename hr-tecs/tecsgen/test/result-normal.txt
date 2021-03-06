@@ -1,0 +1,24 @@
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-normal ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### tecsgen normal-1.idl  #####
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-normal ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### tecsgen normal-2.idl  #####
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-flat ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### tecsgen jsp_flat.sig.CPP sample1_flat.blt.CPP sample1_flat.ct.CPP  #####
+error: jsp_flat.sig.CPP: line 146 G1016 'bool' 付近の構文エラーです
+error: sample1_flat.blt.CPP: line 67 S1027 セルタイプ 'tTexHdrMain' が見つかりません
+error: sample1_flat.blt.CPP: line 71 S1027 セルタイプ 'tTexHdr' が見つかりません
+error: sample1_flat.blt.CPP: line 75 S1027 セルタイプ 'tTaskMain' が見つかりません
+error: sample1_flat.blt.CPP: line 85 S1027 セルタイプ 'tTask' が見つかりません
+error: sample1_flat.blt.CPP: line 95 S1027 セルタイプ 'tTaskMain' が見つかりません
+error: sample1_flat.blt.CPP: line 103 S1027 セルタイプ 'tTask' が見つかりません
+error: sample1_flat.blt.CPP: line 115 S1027 セルタイプ 'tTask' が見つかりません
+error: sample1_flat.blt.CPP: line 127 S1027 セルタイプ 'tTask' が見つかりません
+error: sample1_flat.blt.CPP: line 139 S1027 セルタイプ 'tCycHdrMain' が見つかりません
+error: sample1_flat.blt.CPP: line 144 S1027 セルタイプ 'tCycHdr' が見つかりません
+error: sample1_flat.blt.CPP: line 148 S1027 セルタイプ 'tExcHdrMain' が見つかりません
+error: sample1_flat.blt.CPP: line 152 S1027 セルタイプ 'tExcHdr' が見つかりません
+error: sample1_flat.ct.CPP: line 18 G1016 'TEXPTN' 付近の構文エラーです
+14 errors
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test

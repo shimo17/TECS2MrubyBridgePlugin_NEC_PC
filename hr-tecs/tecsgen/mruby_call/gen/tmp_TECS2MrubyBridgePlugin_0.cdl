@@ -1,0 +1,6 @@
+namespace nTECS2Mruby{
+  celltype tsMcall {
+    call sTECS2MrubyVM cMethodCall;  
+    entry ::sMcall eEnt;
+  };
+};

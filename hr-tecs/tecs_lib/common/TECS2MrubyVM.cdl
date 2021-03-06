@@ -1,0 +1,37 @@
+import_C ("../../tecsgen/tecsgen/tecs/mruby/tecs_mruby.h");
+
+signature sTECS2MrubyVM{
+	void init(void);
+	mrb_state get_mrb(void);
+	void fin(void);
+};
+
+celltype tTECS2MrubyVM{
+	//call sTask cTask;#もし、いるならTECSのセルを登録する呼び口
+
+	entry sTECS2MrubyVM eTECS2MrubyVM;
+	var {
+		
+		mrb_state *mrb;
+		mrb_state *context;	
+	};
+	attr {
+		
+    	const uint8_t *irep=C_EXP("$cell_global$_irep");
+	};
+	
+	FACTORY{
+      write("Makefile.tecsgen", "clean_mrb_c :");
+      write("Makefile.tecsgen", "	rm -f $(MRB_C)"); 
+    };
+    factory{
+      write("Makefile.tecsgen", "POST_TECSGEN_TARGET := $(POST_TECSGEN_TARGET) $cell_global$_mrb.c");
+      //write("Makefile.tecsgen", "$cell_global$_mrb.c : %s tecs.timestamp Makefile", mrubyFile);
+      //write("Makefile.tecsgen", "	$(MRBC) -B$cell_global$_irep -o$cell_global$_mrb.c %s", mrubyFile);
+      write("Makefile.tecsgen", "TECS_COBJS := $(TECS_COBJS) $cell_global$_mrb.o");
+      write("Makefile.tecsgen", "MRB_C := $(MRB_C) $cell_global$_mrb.c");
+      write("$ct_global$_factory.h","extern const uint8_t $cell_global$_irep[];");
+    };
+};
+
+

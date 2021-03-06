@@ -1,0 +1,91 @@
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-abnormal ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### abnormal-1.idl  #####
+error: abnormal-1.idl: line 1 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-abnormal ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### abnormal-2.idl  #####
+error: abnormal-2.idl: line 1 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-abnormal ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### abnormal-3.idl  #####
+error: abnormal-3.idl: line 1 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-abnormal ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### abnormal-4.idl  #####
+error: abnormal-4.idl: line 1 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-abnormal ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### abnormal-5.idl  #####
+error: abnormal-5.idl: line 1 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-1.idl  #####
+error: error-1.idl: line 3 G1016 'int64' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-2.idl  #####
+error: error-2.idl: line 3 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-3.idl  #####
+error: error-3.idl: line 3 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-4.idl  #####
+error: error-4.idl: line 3 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-5.idl  #####
+error: error-5.idl: line 3 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-6.idl  #####
+error: error-6.idl: line 7 G1016 '}' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-7.idl  #####
+error: error-7.idl: line 9 G1016 '}' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-8.idl  #####
+error: error-8.idl: line 7 G1016 '}' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-9.idl  #####
+error: error-9.idl: line 1 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-10.idl  #####
+error: error-10.idl: line 1 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-11.idl  #####
+error: error-11.idl: line 1 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-12.idl  #####
+error: error-12.idl: line 1 G1016 'int32' 付近の構文エラーです
+1 error
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test/sample/data-error ~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test
+##### error-13.idl  #####
+error: error-13.idl: line 3 G1016 '�' 付近の構文エラーです
+error: error-13.idl: line 3 G1016 'int64' 付近の構文エラーです
+2 errors
+~/shimo17-TECS2MrubyBridgePlugin-master/hr-tecs/tecsgen/test

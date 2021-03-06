@@ -1,0 +1,4 @@
+celltype tPlugin2_sSig2 {
+  entry ::sSig2 eThroughEntry;
+  call  ::sSig2 cCall;
+};

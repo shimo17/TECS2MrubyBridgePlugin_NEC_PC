@@ -1,0 +1,4 @@
+celltype tPlugin1_sSig3 {
+  entry ::sSig3 throughEntry;
+  call  ::sSig3 cCall;
+};
