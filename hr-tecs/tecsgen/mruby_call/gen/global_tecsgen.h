@@ -7,7 +7,7 @@
 
 
 /* import_C により import されるヘッダ #_IMP_# */
-#include "../../../test/cygwin/cygwin_tecs.h"
+#include "cygwin_tecs.h"
 #include "../../tecsgen/tecsgen/tecs/mruby/tecs_mruby.h"
 /**/
 

@@ -10,15 +10,19 @@
  * tecsmerge によるマージに使用されます
  *
  * 呼び口関数 #_TCPF_#
- * call port: cBody2 signature: sTaskBody context:task
- *   void           cBody2_main( );
+ * call port: cTECS2MrubyVM signature: sTECS2MrubyVM context:task
+ *   void           cTECS2MrubyVM_init( );
+ *   mrb_state      cTECS2MrubyVM_get_mrb( );
+ *   void           cTECS2MrubyVM_fin( );
+ * call port: cBody2 signature: sMcall context:task
+ *   void           cBody2_Hello( );
  *
  * #[</PREAMBLE>]# */
 
 /* プロトタイプ宣言や変数の定義をここに書きます #_PAC_# */
 #include "tTestMain_tecsgen.h"
-#include "../../../mruby/include/mruby.h"
-#include "../../../mruby/dump.h"
+#include <mruby.h>
+#include <mruby/dump.h>
 
 #ifndef E_OK
 #define	E_OK	0		/* success */
@@ -49,8 +53,7 @@ eBody_main(CELLIDX idx)
 	} /* end if VALID_IDX(idx) */
 
 	cTECS2MrubyVM_init( );
-	cBody2_func( );
-	cBody2_func2( int32_t val, int32_t val6 );
+	cBody2_Hello( );
 	cTECS2MrubyVM_fin( );
 
 }

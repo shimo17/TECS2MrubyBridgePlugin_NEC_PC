@@ -126,7 +126,8 @@ EOT
     if ! b_singleton then
 
       file.print <<EOT
-  #{ct_name}_CB    *p_cellcb;
+  CELLCB    *p_cellcb;
+  mrb_state *mrb = cMethodCall_get_mrb();
   if( VALID_IDX( idx ) ){
     p_cellcb = GET_CELLCB(idx);
   }else{
@@ -149,6 +150,7 @@ EOT
     # else
     #   file.print( "  " )
     # end
+          
 
       #file.print( "  cCal_get_mrb();" )
       file.print( "  cMethodCall_get_mrb();\n  mrb_value #{func_name}_call = mrb_funcall(mrb ,mrb_top_self(mrb), \"#{func_name}\", #{params.size}" )

@@ -1,0 +1,8 @@
+celltype tPlugin1_sSignature {
+  [ allocator(
+	func6.buf<=cCall.func6.buf,
+	func7.buf<=cCall.func7.buf
+  )]
+  entry ::sSignature throughEntry;
+  call  ::sSignature cCall;
+};

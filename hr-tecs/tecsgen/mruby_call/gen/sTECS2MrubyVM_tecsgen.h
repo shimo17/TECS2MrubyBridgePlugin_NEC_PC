@@ -21,7 +21,7 @@ struct tag_sTECS2MrubyVM_VDES {
 /* シグニチャ関数テーブル #_SFT_# */
 struct tag_sTECS2MrubyVM_VMT {
     void           (*init__T)( const struct tag_sTECS2MrubyVM_VDES *edp );
-    mrb_state      (*get_mrb__T)( const struct tag_sTECS2MrubyVM_VDES *edp );
+    mrb_state*     (*get_mrb__T)( const struct tag_sTECS2MrubyVM_VDES *edp );
     void           (*fin__T)( const struct tag_sTECS2MrubyVM_VDES *edp );
 };
 

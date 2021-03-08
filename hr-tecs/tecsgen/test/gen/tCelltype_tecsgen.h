@@ -8,11 +8,10 @@
 /*
  * celltype          :  tCelltype
  * global name       :  tCelltype
- * multi-domain      :  no
  * idx_is_id(actual) :  no(no)
  * singleton         :  no
- * has_CB            :  no
- * has_INIB          :  yes
+ * has_CB            :  false
+ * has_INIB          :  true
  * rom               :  yes
  * CB initializer    :  no
  */
@@ -35,11 +34,11 @@ typedef const struct tag_tCelltype_INIB {
 
 /* CB は存在しない。INIB を CB の代わりに使用するための define #_DCI_# */
 #define tCelltype_CB_tab           tCelltype_INIB_tab
+#define tCelltype_SINGLE_CELL_CB   tCelltype_SINGLE_CELL_INIB
 #define tCelltype_CB               tCelltype_INIB
 #define tag_tCelltype_CB           tag_tCelltype_INIB
 
-/* シングルトンセル CB プロトタイプ宣言 #_MCPB_# */
-extern tCelltype_INIB  tCelltype_INIB_tab[];
+extern tCelltype_CB  tCelltype_CB_tab[];
 
 /* セルタイプのIDX型 #_CTIX_# */
 typedef const struct tag_tCelltype_INIB *tCelltype_IDX;
@@ -67,9 +66,6 @@ typedef const struct tag_tCelltype_INIB *tCelltype_IDX;
 
 
 
-#ifndef TECSFLOW
-#else  /* TECSFLOW */
-#endif /* TECSFLOW */
 #endif /* TOPPERS_CB_TYPE_ONLY */
 
 #ifndef TOPPERS_MACRO_ONLY

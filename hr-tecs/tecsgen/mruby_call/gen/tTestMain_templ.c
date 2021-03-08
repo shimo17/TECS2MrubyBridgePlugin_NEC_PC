@@ -12,11 +12,10 @@
  * 呼び口関数 #_TCPF_#
  * call port: cTECS2MrubyVM signature: sTECS2MrubyVM context:task
  *   void           cTECS2MrubyVM_init( );
- *   mrb_state      cTECS2MrubyVM_get_mrb( );
+ *   mrb_state*     cTECS2MrubyVM_get_mrb( );
  *   void           cTECS2MrubyVM_fin( );
  * call port: cBody2 signature: sMcall context:task
- *   void           cBody2_func( );
- *   int32_t        cBody2_func2( int32_t val, int32_t val6 );
+ *   void           cBody2_Hello( );
  *
  * #[</PREAMBLE>]# */
 

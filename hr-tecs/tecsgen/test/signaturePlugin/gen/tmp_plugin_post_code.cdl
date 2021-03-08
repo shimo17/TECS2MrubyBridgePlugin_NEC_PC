@@ -1,0 +1,17 @@
+
+  // MrubyBridgeSignaturePlugin: MBP601
+  cell nMruby::tsTest_Initializer VM_tsTest_Initializer{ };
+  // MBP602
+  cell nMruby::tInt32Pointer CtInt32Pointer { };
+  cell nMruby::tCharPointer CtCharPointer { };
+  cell nMruby::tULongPointer CtULongPointer { };
+  // MBP603
+  cell nMruby::tagSt CtagSt { };
+  /* === VM name is 'VM' === (MBP610) */
+  cell nMruby::tTECSInitializer VM_TECSInitializer {
+    cInitialize[] = VM_tsTest_Initializer.eInitialize;
+    cInitialize[] = CtInt32Pointer.eInitialize;
+    cInitialize[] = CtCharPointer.eInitialize;
+    cInitialize[] = CtULongPointer.eInitialize;
+    cInitialize[] = CtagSt.eInitialize;
+  };

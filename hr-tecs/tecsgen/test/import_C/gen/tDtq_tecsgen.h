@@ -8,11 +8,10 @@
 /*
  * celltype          :  tDtq
  * global name       :  tDtq
- * multi-domain      :  no
  * idx_is_id(actual) :  no(no)
  * singleton         :  no
- * has_CB            :  no
- * has_INIB          :  yes
+ * has_CB            :  false
+ * has_INIB          :  true
  * rom               :  yes
  * CB initializer    :  no
  */
@@ -38,11 +37,11 @@ typedef const struct tag_tDtq_INIB {
 
 /* CB は存在しない。INIB を CB の代わりに使用するための define #_DCI_# */
 #define tDtq_CB_tab           tDtq_INIB_tab
+#define tDtq_SINGLE_CELL_CB   tDtq_SINGLE_CELL_INIB
 #define tDtq_CB               tDtq_INIB
 #define tag_tDtq_CB           tag_tDtq_INIB
 
-/* シングルトンセル CB プロトタイプ宣言 #_MCPB_# */
-extern tDtq_INIB  tDtq_INIB_tab[];
+extern tDtq_CB  tDtq_CB_tab[];
 
 /* セルタイプのIDX型 #_CTIX_# */
 typedef const struct tag_tDtq_INIB *tDtq_IDX;
@@ -83,9 +82,6 @@ ER           tDtq_eiD_ifsnd_dtq(tDtq_IDX idx, const void* data);
 
 
 
-#ifndef TECSFLOW
-#else  /* TECSFLOW */
-#endif /* TECSFLOW */
 #endif /* TOPPERS_CB_TYPE_ONLY */
 
 #ifndef TOPPERS_MACRO_ONLY

@@ -8,11 +8,10 @@
 /*
  * celltype          :  tMyMain
  * global name       :  tMyMain
- * multi-domain      :  no
  * idx_is_id(actual) :  no(no)
  * singleton         :  no
- * has_CB            :  no
- * has_INIB          :  yes
+ * has_CB            :  false
+ * has_INIB          :  true
  * rom               :  yes
  * CB initializer    :  no
  */
@@ -37,11 +36,11 @@ typedef const struct tag_tMyMain_INIB {
 
 /* CB は存在しない。INIB を CB の代わりに使用するための define #_DCI_# */
 #define tMyMain_CB_tab           tMyMain_INIB_tab
+#define tMyMain_SINGLE_CELL_CB   tMyMain_SINGLE_CELL_INIB
 #define tMyMain_CB               tMyMain_INIB
 #define tag_tMyMain_CB           tag_tMyMain_INIB
 
-/* シングルトンセル CB プロトタイプ宣言 #_MCPB_# */
-extern tMyMain_INIB  tMyMain_INIB_tab[];
+extern tMyMain_CB  tMyMain_CB_tab[];
 
 /* セルタイプのIDX型 #_CTIX_# */
 typedef const struct tag_tMyMain_INIB *tMyMain_IDX;
@@ -73,9 +72,6 @@ ER           tMyMain_eM_main(tMyMain_IDX idx, const void* exinf);
 
 
 
-#ifndef TECSFLOW
-#else  /* TECSFLOW */
-#endif /* TECSFLOW */
 #endif /* TOPPERS_CB_TYPE_ONLY */
 
 #ifndef TOPPERS_MACRO_ONLY

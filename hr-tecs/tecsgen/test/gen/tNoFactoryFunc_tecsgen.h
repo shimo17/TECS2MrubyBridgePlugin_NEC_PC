@@ -8,11 +8,10 @@
 /*
  * celltype          :  tNoFactoryFunc
  * global name       :  tNoFactoryFunc
- * multi-domain      :  no
  * idx_is_id(actual) :  no(no)
  * singleton         :  no
- * has_CB            :  no
- * has_INIB          :  no
+ * has_CB            :  false
+ * has_INIB          :  false
  * rom               :  yes
  * CB initializer    :  no
  */
@@ -31,7 +30,7 @@ extern "C" {
 typedef struct tag_tNoFactoryFunc_CB {
     int  dummy;
 } tNoFactoryFunc_CB;
-/* シングルトンセル CB プロトタイプ宣言 #_MCPB_# */
+extern tNoFactoryFunc_CB  tNoFactoryFunc_CB_tab[];
 
 /* セルタイプのIDX型 #_CTIX_# */
 typedef int   tNoFactoryFunc_IDX;
@@ -51,9 +50,6 @@ typedef int   tNoFactoryFunc_IDX;
 
 /* セルCBを得るマクロ #_GCB_# */
 #define tNoFactoryFunc_GET_CELLCB(idx) ((void *)0)
-#ifndef TECSFLOW
-#else  /* TECSFLOW */
-#endif /* TECSFLOW */
 #endif /* TOPPERS_CB_TYPE_ONLY */
 
 #ifndef TOPPERS_MACRO_ONLY

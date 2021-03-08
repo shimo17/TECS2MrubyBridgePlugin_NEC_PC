@@ -13,7 +13,7 @@ celltype tTestMain{
 
 };
 cell tTECS2MrubyVM TECS2MrubyVM{
-	
+	mrubyFile = "test_stub.rb";
 };
 generate( TECS2MrubyBridgePlugin, sMcall, "" );
  cell nTECS2Mruby::tsMcall McallBridge {

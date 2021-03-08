@@ -13,7 +13,7 @@
 TARGET_BASE = mruby_call
 BASE_DIR = .
 GEN_DIR = $(BASE_DIR)/gen
-INCLUDES = -I $(BASE_DIR)/. -I $(BASE_DIR)/../test/cygwin -I /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs -I /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/mruby -I /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/posix -I /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/rpc -I /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/TECSInfo -I /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/TLSFMalloc -I $(GEN_DIR)
+INCLUDES = -I $(BASE_DIR)/. -I $(BASE_DIR)/../test/cygwin -I /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs -I /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/mruby -I /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/posix -I /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/rpc -I /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/TECSInfo -I /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/TLSFMalloc -I $(GEN_DIR)
 DEFINES =
 
 # end of fixed variable (unchangeable by config or plugin)
@@ -44,7 +44,7 @@ TIMESTAMP = $(GEN_DIR)/tecsgen.timestamp
 #default relocatable object (.o) directory
 _TECS_OBJ_DIR = $(GEN_DIR)/
 
-
+MRBC = mrbc
 
 # Pre-tecsgen target
 PRE_TECSGEN_TARGET =
@@ -53,8 +53,8 @@ PRE_TECSGEN_TARGET =
 POST_TECSGEN_TARGET =
 
 # vpath for C sources and headers
-vpath %.c $(SRC_DIR) $(GEN_DIR)  ../test/cygwin /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/mruby /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/posix /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/rpc /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/TECSInfo /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/TLSFMalloc
-vpath %.h $(SRC_DIR) $(GEN_DIR)  ../test/cygwin /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/mruby /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/posix /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/rpc /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/TECSInfo /home/shimo/mruby-on-ev3rt+tecs2.2.0/hr-tecs/tecsgen/tecsgen/tecs/TLSFMalloc
+vpath %.c $(SRC_DIR) $(GEN_DIR)  ../test/cygwin /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/mruby /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/posix /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/rpc /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/TECSInfo /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/TLSFMalloc
+vpath %.h $(SRC_DIR) $(GEN_DIR)  ../test/cygwin /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/mruby /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/posix /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/rpc /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/TECSInfo /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/tecs/TLSFMalloc
 
 # Other objects (out of tecsgen)
 OTHER_OBJS =                      # Add objects out of tecs care.
@@ -70,15 +70,15 @@ all : $(TARGET)
 -include $(GEN_DIR)/Makefile.tecsgen
 -include $(GEN_DIR)/Makefile.depend
 
-$(TARGET) : $(TIMESTAMP) $(CELLTYPE_COBJS) $(TECSGEN_COBJS) $(PLUGIN_COBJS) $(OTHER_OBJS)
-	$(LD) -o $(TARGET) $(TECSGEN_COBJS) $(CELLTYPE_COBJS) $(PLUGIN_COBJS) $(OTHER_OBJS) $(LDFLAGS)
+$(TARGET) : $(TIMESTAMP) $(CELLTYPE_COBJS) $(TECSGEN_COBJS) $(PLUGIN_COBJS) $(OTHER_OBJS) $(TECS_COBJS)
+	$(LD) -o $(TARGET) $(TECSGEN_COBJS) $(CELLTYPE_COBJS) $(PLUGIN_COBJS) $(OTHER_OBJS) $(TECS_COBJS) $(LDFLAGS) 
 
 clean :
 	rm -f $(CELLTYPE_COBJS) $(TECSGEN_COBJS) $(PLUGIN_COBJS) $(OTHER_OBJS) $(TARGET)  $(TIMESTAMP)
 	rm -rf $(GEN_DIR)
 
-tecs : $(PRE_TECSGEN_TARGET) $(TIMESTAMP) $(POST_TECSGEN_TARGET)
-
+tecs : $(PRE_TECSGEN_TARGET) $(TIMESTAMP) 
+	touch tecsgen.timestamp
 $(TIMESTAMP) : $(TECS_IMPORTS)
 	$(TECSGEN)  -I../test/cygwin mruby_call.cdl
 # generic target for objs

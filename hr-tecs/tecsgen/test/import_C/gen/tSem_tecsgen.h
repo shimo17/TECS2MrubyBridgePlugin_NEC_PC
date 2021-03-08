@@ -8,11 +8,10 @@
 /*
  * celltype          :  tSem
  * global name       :  tSem
- * multi-domain      :  no
  * idx_is_id(actual) :  no(no)
  * singleton         :  no
- * has_CB            :  no
- * has_INIB          :  yes
+ * has_CB            :  false
+ * has_INIB          :  true
  * rom               :  yes
  * CB initializer    :  no
  */
@@ -37,11 +36,11 @@ typedef const struct tag_tSem_INIB {
 
 /* CB は存在しない。INIB を CB の代わりに使用するための define #_DCI_# */
 #define tSem_CB_tab           tSem_INIB_tab
+#define tSem_SINGLE_CELL_CB   tSem_SINGLE_CELL_INIB
 #define tSem_CB               tSem_INIB
 #define tag_tSem_CB           tag_tSem_INIB
 
-/* シングルトンセル CB プロトタイプ宣言 #_MCPB_# */
-extern tSem_INIB  tSem_INIB_tab[];
+extern tSem_CB  tSem_CB_tab[];
 
 /* セルタイプのIDX型 #_CTIX_# */
 typedef const struct tag_tSem_INIB *tSem_IDX;
@@ -77,9 +76,6 @@ ER           tSem_eS_twai_sem(tSem_IDX idx, TMO tmout);
 
 
 
-#ifndef TECSFLOW
-#else  /* TECSFLOW */
-#endif /* TECSFLOW */
 #endif /* TOPPERS_CB_TYPE_ONLY */
 
 #ifndef TOPPERS_MACRO_ONLY

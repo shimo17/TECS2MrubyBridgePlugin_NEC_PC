@@ -8,11 +8,10 @@
 /*
  * celltype          :  tCyc
  * global name       :  tCyc
- * multi-domain      :  no
  * idx_is_id(actual) :  no(no)
  * singleton         :  no
- * has_CB            :  no
- * has_INIB          :  yes
+ * has_CB            :  false
+ * has_INIB          :  true
  * rom               :  yes
  * CB initializer    :  no
  */
@@ -40,11 +39,11 @@ typedef const struct tag_tCyc_INIB {
 
 /* CB は存在しない。INIB を CB の代わりに使用するための define #_DCI_# */
 #define tCyc_CB_tab           tCyc_INIB_tab
+#define tCyc_SINGLE_CELL_CB   tCyc_SINGLE_CELL_INIB
 #define tCyc_CB               tCyc_INIB
 #define tag_tCyc_CB           tag_tCyc_INIB
 
-/* シングルトンセル CB プロトタイプ宣言 #_MCPB_# */
-extern tCyc_INIB  tCyc_INIB_tab[];
+extern tCyc_CB  tCyc_CB_tab[];
 
 /* セルタイプのIDX型 #_CTIX_# */
 typedef const struct tag_tCyc_INIB *tCyc_IDX;
@@ -88,18 +87,11 @@ ER           tCyc_eCyc_stp_cyc(tCyc_IDX idx);
 
 
 
-#ifndef TECSFLOW
  /* 呼び口関数マクロ #_CPM_# */
 #define tCyc_cHdlr_main( p_that, exinf ) \
 	  tMyMain_eM_main( \
-	   &tMyMain_INIB_tab[0], (exinf) )
+	   &tMyMain_CB_tab[0], (exinf) )
 
-#else  /* TECSFLOW */
-#define tCyc_cHdlr_main( p_that, exinf ) \
-	  (p_that)->cHdlr.main__T( \
- (exinf) )
-
-#endif /* TECSFLOW */
 #endif /* TOPPERS_CB_TYPE_ONLY */
 
 #ifndef TOPPERS_MACRO_ONLY

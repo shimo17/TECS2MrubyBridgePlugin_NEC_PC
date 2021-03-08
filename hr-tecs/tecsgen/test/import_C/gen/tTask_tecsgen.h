@@ -8,11 +8,10 @@
 /*
  * celltype          :  tTask
  * global name       :  tTask
- * multi-domain      :  no
  * idx_is_id(actual) :  no(no)
  * singleton         :  no
- * has_CB            :  no
- * has_INIB          :  yes
+ * has_CB            :  false
+ * has_INIB          :  true
  * rom               :  yes
  * CB initializer    :  no
  */
@@ -41,11 +40,11 @@ typedef const struct tag_tTask_INIB {
 
 /* CB は存在しない。INIB を CB の代わりに使用するための define #_DCI_# */
 #define tTask_CB_tab           tTask_INIB_tab
+#define tTask_SINGLE_CELL_CB   tTask_SINGLE_CELL_INIB
 #define tTask_CB               tTask_INIB
 #define tag_tTask_CB           tag_tTask_INIB
 
-/* シングルトンセル CB プロトタイプ宣言 #_MCPB_# */
-extern tTask_INIB  tTask_INIB_tab[];
+extern tTask_CB  tTask_CB_tab[];
 
 /* セルタイプのIDX型 #_CTIX_# */
 typedef const struct tag_tTask_INIB *tTask_IDX;
@@ -104,18 +103,11 @@ ER           tTask_eiT_iras_tex(tTask_IDX idx, TEXPTN rasptn);
 
 
 
-#ifndef TECSFLOW
  /* 呼び口関数マクロ #_CPM_# */
 #define tTask_cMain_main( p_that, exinf ) \
 	  tMyMain_eM_main( \
-	   &tMyMain_INIB_tab[1], (exinf) )
+	   &tMyMain_CB_tab[1], (exinf) )
 
-#else  /* TECSFLOW */
-#define tTask_cMain_main( p_that, exinf ) \
-	  (p_that)->cMain.main__T( \
- (exinf) )
-
-#endif /* TECSFLOW */
 #endif /* TOPPERS_CB_TYPE_ONLY */
 
 #ifndef TOPPERS_MACRO_ONLY

@@ -8,11 +8,10 @@
 /*
  * celltype          :  tKernel
  * global name       :  tKernel
- * multi-domain      :  no
  * idx_is_id(actual) :  no(no)
  * singleton         :  yes
- * has_CB            :  yes
- * has_INIB          :  no
+ * has_CB            :  true
+ * has_INIB          :  false
  * rom               :  yes
  * CB initializer    :  yes
  */
@@ -100,9 +99,6 @@ BOOL         tKernel_eVsns_vsns_ini();
 #define tKernel_GET_dummy() 	(tKernel_SINGLE_CELL_CB.dummy)
 #define tKernel_SET_dummy(val)	(tKernel_SINGLE_CELL_CB.dummy=(val))
 
-#ifndef TECSFLOW
-#else  /* TECSFLOW */
-#endif /* TECSFLOW */
 #endif /* TOPPERS_CB_TYPE_ONLY */
 
 #ifndef TOPPERS_MACRO_ONLY

@@ -8,11 +8,10 @@
 /*
  * celltype          :  tLedout
  * global name       :  nNS_tLedout
- * multi-domain      :  no
  * idx_is_id(actual) :  no(no)
  * singleton         :  no
- * has_CB            :  yes
- * has_INIB          :  yes
+ * has_CB            :  true
+ * has_INIB          :  true
  * rom               :  yes
  * CB initializer    :  yes
  */
@@ -40,7 +39,6 @@ typedef struct tag_nNS_tLedout_CB {
     /* var #_VA_# */ 
     int32_t        b;
 }  nNS_tLedout_CB;
-/* シングルトンセル CB プロトタイプ宣言 #_MCPB_# */
 extern nNS_tLedout_CB  nNS_tLedout_CB_tab[];
 
 /* セルタイプのIDX型 #_CTIX_# */
@@ -78,9 +76,6 @@ typedef struct tag_nNS_tLedout_CB *nNS_tLedout_IDX;
 #define nNS_tLedout_GET_b(p_that)	((p_that)->b)
 #define nNS_tLedout_SET_b(p_that,val)	((p_that)->b=(val))
 
-#ifndef TECSFLOW
-#else  /* TECSFLOW */
-#endif /* TECSFLOW */
 #endif /* TOPPERS_CB_TYPE_ONLY */
 
 #ifndef TOPPERS_MACRO_ONLY

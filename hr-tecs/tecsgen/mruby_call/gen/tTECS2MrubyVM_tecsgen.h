@@ -49,7 +49,7 @@ typedef struct tag_tTECS2MrubyVM_CB *tTECS2MrubyVM_IDX;
 /* 受け口関数プロトタイプ宣言 #_EPP_# */
 /* sTECS2MrubyVM */
 void         tTECS2MrubyVM_eTECS2MrubyVM_init(tTECS2MrubyVM_IDX idx);
-mrb_state    tTECS2MrubyVM_eTECS2MrubyVM_get_mrb(tTECS2MrubyVM_IDX idx);
+mrb_state*   tTECS2MrubyVM_eTECS2MrubyVM_get_mrb(tTECS2MrubyVM_IDX idx);
 void         tTECS2MrubyVM_eTECS2MrubyVM_fin(tTECS2MrubyVM_IDX idx);
 #ifdef __cplusplus
 }

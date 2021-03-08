@@ -58,7 +58,7 @@ eTECS2MrubyVM_init(CELLIDX idx)
  * global_name:  tTECS2MrubyVM_eTECS2MrubyVM_get_mrb
  * oneway:       false
  * #[</ENTRY_FUNC>]# */
-mrb_state
+mrb_state*
 eTECS2MrubyVM_get_mrb(CELLIDX idx)
 {
 	CELLCB	*p_cellcb;

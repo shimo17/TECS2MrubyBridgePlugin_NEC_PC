@@ -14,4 +14,4 @@ struct RClass {int dummy;};
 struct RProc {int dummy;};
 
 typedef int CELLCB;
-/*  37 "gen/tmp_C_src.c" 2 */
+/*  36 "gen/tmp_C_src.c" 2 */

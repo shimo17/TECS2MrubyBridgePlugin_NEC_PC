@@ -1,0 +1,45 @@
+import( "gen/tMarshaler_sSimple.cdl" );
+
+[active]
+composite tRPCPlugin_tTDR_tDataqueueOWChannel_sSimple {
+  /* Interface */
+  attr {
+    PRI taskPriority;
+  };
+  call ::sSimple cCall;
+  entry ::sSimple eThroughEntry;
+  call sTDR       cTDR;
+  call sEventflag cEventflag;
+
+  /* Implementation */
+  // Semaphore for Multi-task use ("specify noClientSemaphore" option to delete this)
+  cell tSemaphore Semaphore {
+    count = 1;
+    attribute = C_EXP( "TA_NULL" );
+  };
+
+  cell tMarshaler_sSimple sSimple_marshaler{
+    cTDR         => composite.cTDR;
+    cEventflag   => composite.cEventflag;
+    cLockChannel = Semaphore.eSemaphore;
+  };
+  cell tPPAllocator PPAllocator {
+    heapSize = 1024;
+  };
+  cell tUnmarshaler_sSimple sSimple_unmarshaler{
+    cTDR        => composite.cTDR;
+    cEventflag  => composite.cEventflag;
+    cServerCall => composite.cCall;
+    cPPAllocator = PPAllocator.ePPAllocator;
+  };
+  cell tRPCDedicatedTaskMain RPCTaskMain{
+    cMain = sSimple_unmarshaler.eUnmarshalAndCallFunction;
+  };
+  cell tTask Task {
+    cBody     = RPCTaskMain.eMain;
+    priority  = taskPriority;
+    taskAttribute = C_EXP( "TA_ACT" );  /* mikan : marshaler starts at the beginning */
+    stackSize     = 4096;
+  };
+  composite.eThroughEntry => sSimple_marshaler.eClientEntry;
+};
