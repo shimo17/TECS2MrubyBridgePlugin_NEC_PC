@@ -153,7 +153,7 @@ EOT
           
 
       #file.print( "  cCal_get_mrb();" )
-      file.print( "  cMethodCall_get_mrb();\n  mrb_value #{func_name}_call = mrb_funcall(mrb ,mrb_top_self(mrb), \"#{func_name}\", #{params.size}" )
+      file.print( "  mrb_value #{func_name}_call = mrb_funcall(mrb ,mrb_top_self(mrb), \"#{func_name}\", #{params.size}" )
       #param2 = ["st", "\"#{func_name}_inst\""]
       #if ! b_ret_void then
         delim = ","

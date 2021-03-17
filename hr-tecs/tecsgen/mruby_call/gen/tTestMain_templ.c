@@ -52,7 +52,10 @@ eBody_main(CELLIDX idx)
 		/* エラー処理コードをここに記述します */
 	} /* end if VALID_IDX(idx) */
 
-	/* ここに処理本体を記述します #_TEFB_# */
+	
+	cTECS2MrubyVM_init( );
+	cBody2_Hello( );
+	cTECS2MrubyVM_fin( );
 
 }
 

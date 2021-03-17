@@ -49,7 +49,6 @@ eEnt_Hello(CELLIDX idx)
 
   
 
-  cMethodCall_get_mrb();
   mrb_value Hello_call = mrb_funcall(mrb ,mrb_top_self(mrb), "Hello", 0);
 }
 

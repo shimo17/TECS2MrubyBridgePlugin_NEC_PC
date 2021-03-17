@@ -27,7 +27,7 @@ CFLAGS = $(INCLUDES) $(DEFINES) -D  "Inline=static inline"
 LD = gcc
 
 #default Liknker Options
-LDFLAGS = 
+LDFLAGS = -lmruby -L /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/mruby/build/host/lib/
 
 #default source directory
 SRC_DIR = $(BASE_DIR)/src
@@ -70,9 +70,11 @@ all : $(TARGET)
 -include $(GEN_DIR)/Makefile.tecsgen
 -include $(GEN_DIR)/Makefile.depend
 
-$(TARGET) : $(TIMESTAMP) $(CELLTYPE_COBJS) $(TECSGEN_COBJS) $(PLUGIN_COBJS) $(OTHER_OBJS) $(TECS_COBJS)
-	$(LD) -o $(TARGET) $(TECSGEN_COBJS) $(CELLTYPE_COBJS) $(PLUGIN_COBJS) $(OTHER_OBJS) $(TECS_COBJS) $(LDFLAGS) 
+#$(TARGET) : $(TIMESTAMP) $(CELLTYPE_COBJS) $(TECSGEN_COBJS) $(PLUGIN_COBJS) $(OTHER_OBJS)
+#	$(LD) -o $(TARGET) $(TECSGEN_COBJS) $(CELLTYPE_COBJS) $(PLUGIN_COBJS) $(OTHER_OBJS) $(LDFLAGS) 
 
+$(TARGET) : $(TIMESTAMP) $(TECS_COBJS) $(OTHER_OBJS)
+	$(LD) -o $(TARGET) $(TECS_COBJS) $(OTHER_OBJS) $(LDFLAGS)
 clean :
 	rm -f $(CELLTYPE_COBJS) $(TECSGEN_COBJS) $(PLUGIN_COBJS) $(OTHER_OBJS) $(TARGET)  $(TIMESTAMP)
 	rm -rf $(GEN_DIR)
