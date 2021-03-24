@@ -39,7 +39,7 @@ typedef struct tag_tTECS2MrubyVM_CB {
     /* call port #_NEP_# */ 
     /* var #_VA_# */ 
     mrb_state*     mrb;
-    mrb_state*     context;
+    mrbc_context*  context;
 }  tTECS2MrubyVM_CB;
 extern tTECS2MrubyVM_CB  tTECS2MrubyVM_CB_tab[];
 

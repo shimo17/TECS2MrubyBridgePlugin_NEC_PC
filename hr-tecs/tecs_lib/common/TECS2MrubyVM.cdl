@@ -13,7 +13,7 @@ celltype tTECS2MrubyVM{
 	var {
 		
 		mrb_state *mrb;
-		mrb_state *context;	
+		mrbc_context *context;	
 	};
 	attr {
 		[omit]char_t *mrubyFile;

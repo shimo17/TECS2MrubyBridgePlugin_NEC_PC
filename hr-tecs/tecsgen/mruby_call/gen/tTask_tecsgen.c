@@ -28,7 +28,7 @@ tTask_INIB tTask_INIB_tab[] = {
         TA_ACT,                                  /* taskAttribute */
         TA_NULL,                                 /* exceptionAttribute */
         10,                                      /* priority */
-        81920,                                   /* stackSize */
+        81960,                                   /* stackSize */
         "tTask_Task",                            /* name */
     },
 };

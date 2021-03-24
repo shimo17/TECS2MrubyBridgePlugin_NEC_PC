@@ -27,7 +27,7 @@ cell tTestMain TestMain{
 
 cell tTask Task{
 	cBody = TestMain.eBody;
-	stackSize = 81920;
+	stackSize = 81960;
     priority  = 10;
     taskAttribute =  C_EXP("TA_ACT");//asp用の名前(cygwin_kernel.cdl見ればわかる)
 

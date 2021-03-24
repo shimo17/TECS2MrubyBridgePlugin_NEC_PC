@@ -1,7 +1,6 @@
 def Hello
-	puts "hello,mruby"
-    
+	puts "hello"    
 end
 
 
-
+Hello

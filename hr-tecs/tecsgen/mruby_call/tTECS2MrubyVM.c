@@ -42,7 +42,7 @@ mrb_init_mrb(CELLCB	*p_cellcb, mrb_state *mrb)
 {
   mrb_irep *irep = mrb_read_irep(VAR_mrb, ATTR_irep);
 
-  mrb_run(VAR_mrb, mrb_proc_new(VAR_mrb, ATTR_irep), mrb_top_self(VAR_mrb));
+  mrb_run(VAR_mrb, mrb_proc_new(VAR_mrb, irep), mrb_top_self(VAR_mrb));
   if (VAR_mrb->exc) {
     mrb_p(VAR_mrb, mrb_obj_value(VAR_mrb->exc));
     exit(0);
