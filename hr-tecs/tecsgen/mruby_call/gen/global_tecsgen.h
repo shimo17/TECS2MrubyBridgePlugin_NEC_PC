@@ -8,7 +8,7 @@
 
 /* import_C により import されるヘッダ #_IMP_# */
 #include "cygwin_tecs.h"
-#include "../../tecsgen/tecsgen/tecs/mruby/tecs_mruby.h"
+#include "tecs_mruby.h"
 /**/
 
 #ifndef TOPPERS_MACRO_ONLY

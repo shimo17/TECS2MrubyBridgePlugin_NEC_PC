@@ -1,4 +1,4 @@
-import_C ("../../tecsgen/tecsgen/tecs/mruby/tecs_mruby.h");
+import_C ("tecs_mruby.h");
 
 signature sTECS2MrubyVM{
 	void init(void);

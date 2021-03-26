@@ -27,7 +27,7 @@ CFLAGS = $(INCLUDES) $(DEFINES) -D  "Inline=static inline"
 LD = gcc
 
 #default Liknker Options
-LDFLAGS = -lmruby -L /home/yamas/TECS2MrubyBridgePlugin/hr-tecs/tecsgen/tecsgen/mruby/build/host/lib/
+LDFLAGS = /home/yamas/TECS2MrubyBridgePlugin/mruby/build/host/lib/
 
 #default source directory
 SRC_DIR = $(BASE_DIR)/src
